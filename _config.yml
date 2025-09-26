@@ -1,8 +1,8 @@
 # A change in this file, NEEDS a rebuild!
 #
 
-title: <font size="6"><span style="color:#FFD700">W</span>W <span style="color:#FFA500">L</span>Template <span style="color:#FF7F50">S</span>tack Python </font>
-description: <b><i><font size="3">A Docker container for Python Flask/FastAPI projects</span></font></i></b>
+title: <font size="6"><span style="color:#FFD700">W</span>S <span style="color:#FFA500">L</span> Template <span style="color:#FF7F50">S</span>tack Python </font>
+description: <b><i><font size="3">A WSL container for Python Flask/FastAPI projects</span></font></i></b>
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-architect
