@@ -9,3 +9,6 @@
 # EXCEPTION: allow the root-level folder '_layouts/' and the file: !_config.yml. Make sure the exceptions are after the general rule!
 !/_layouts/
 !/_config.yml
+
+# Don't ignore the suggested folder for the WSL data file
+!/_wsl-data/
