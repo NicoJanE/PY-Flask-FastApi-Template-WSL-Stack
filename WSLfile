@@ -20,8 +20,7 @@ USER nico
 # 1.2 OPTIONAL Indicate to Create new distro, using: DISTRO and USER. If the WSL exists this will fail.
 # Comment this if the Distro already exists
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - - - 
-DISTRO_DEBIAN_NEW  --web-download --location "D:\WSL\WSL-Data\Temp\python" 
-
+DISTRO_DEBIAN_NEW  --web-download --location "_wsl-data\project" 
 
 # 2. Indicate the command to install 
 # --------------------------------------------------------------------------------------------------------------------------------
