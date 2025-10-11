@@ -1,0 +1,25 @@
+{
+    "python.defaultInterpreterPath": "/home/nico/app/.venv/bin/python",
+    "python.pythonPath": "/home/nico/app/.venv/bin/python",
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/src"
+    ],
+    "python.analysis.autoSearchPaths": true,
+    "python.analysis.autoImportCompletions": true,
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false,
+    "pylance.insidersChannel": "off",
+
+
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "string.quoted.docstring.multi.python",
+                "settings": {
+                    "foreground": "#4A7C59",  // 6A9955 normal Green color
+                    "fontStyle": ""
+                }
+            }
+        ]
+    }
+}

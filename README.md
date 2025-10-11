@@ -13,6 +13,7 @@ This is a Python Flask application (template) that requires the following librar
 4. PDB: Python Debugger, used for debugging the Flask application.
 
 The template includes a basic structure for a web application using FastAPI and Flask, with support for Redis as a database and Jinja2 for templating. PDB is provided for debugging purposes during development.
+After installation your project is in the Debian WSL distribution, use VS Code to develop it there.
 
 <small> Note: There is also a Docker version of this project template available. However, due to remote debugging issues in the Docker container, it is recommended to use this non-Docker version. The Docker container can be found [here](https://github.com/NicoJanE/PY-Flask-FastApi-Template-Stack) <small>
 
