@@ -30,7 +30,7 @@ There is also a ***Architecture.md*** document that describes the core, yes arch
 ### 1.1 Template Variables
 
 *Sample: base.html*
-
+{% raw %}
 ``` html
 <!DOCTYPE html>
 <html lang="en">
@@ -47,6 +47,7 @@ There is also a ***Architecture.md*** document that describes the core, yes arch
 </body>
 </html>
 ```
+{% endraw %}
 
 > Python Call : `return render_template('base.html', name=pyVarName,title= pyVarTitle)`
 
@@ -55,7 +56,7 @@ There is also a ***Architecture.md*** document that describes the core, yes arch
 Using the the same  *base.html* together with the *second.html*
 
 *Sample: second.html*
-
+{% raw %}
 ``` html
 {% extends "base.html" %}
 
@@ -68,6 +69,7 @@ Using the the same  *base.html* together with the *second.html*
 
 {{content2Data}}    <!-- This has nothing to do  with block content, just data replacement! -->
 ```
+{% endraw %}
 
 > Python Call :  
 >> `return render_template('base.html', name=pyVarName, title=pyVarTitle)`  
@@ -97,7 +99,7 @@ Using the the same  *base.html* together with the *second.html*
 ### 1.3 Control Structures & 1.4 filters
 
 Regarding Control Structures the following example
-
+{% raw %}
 ``` html
 <!DOCTYPE html>
 <html lang="en">
@@ -152,6 +154,7 @@ Regarding Control Structures the following example
 </body>
 </html>
 ```
+{% endraw %}
 
 <small>
 
@@ -167,7 +170,7 @@ Regarding Control Structures the following example
 ### 1.5 Marcos
 
 A Marco is a kind of **substitution function**, it turns a number of parameters into a more advanced output structure, using the parameters
-
+{% raw %}
 ``` html
 <!DOCTYPE html>
 <html lang="en">
@@ -189,7 +192,7 @@ A Marco is a kind of **substitution function**, it turns a number of parameters 
 </body>
 </html>
 ```
-
+{% endraw %}
 ---
 
 <br>
