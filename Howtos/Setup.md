@@ -1,9 +1,3 @@
----
-layout: default_c
-RefPages:
-
---- 
-
 # What
 
 This is a Python project application template using Flask and FastAPI in a **WSL container**
@@ -46,21 +40,23 @@ This file functions similarly to a Dockerfile and can:
 
 This will install and configure the WSl distribution
 
-1. Open the `WSFile` and optional customize settings, recommend settings to customize include:
-
-- `DISTRO` Indicates the WSL distribution to use, if it's a new distribution make sure to uncomment: `DISTRO_DEBIAN_NEW` 
-- `USER` Indicates the user under which the Debian packages are installed and to which user directory the  files are copied 
-- `DISTRO_DEBIAN_NEW` When Enabled will generate a new WSL under the name defined in `DISTRO`
-- `DESCRIPTION` Set a description for the WSL 
+1. Open and edit the `WSFile` to customize the settings, recommend settings to customize include:
+    - `DISTRO` Indicates the WSL distribution to use, if it's a new distribution make sure to uncomment: `DISTRO_DEBIAN_NEW` 
+    - `USER` Indicates the user under which the Debian packages are installed and to which user directory the  files are copied 
+      - when changing this also change the lines marked with the comment;: `# Make sure this is set correct!`
+    - `DISTRO_DEBIAN_NEW` When Enabled will generate a new WSL under the name defined in `DISTRO`
+   - `DESCRIPTION` Set a description for the WSL 
 
 2. Run the WSLFile with:  
-`powershell.exe -ExecutionPolicy Bypass -File .\wsl-parser.ps1`
-3. Ensure that this is the only WSL distribution running.
-4. Check available WSL distributions and their states with: `wsl -l -v
-5. Set the new WSL as default with: `wsl --set-default <DistroName>`.
-6. Restart the WSL with: `wsl --shutdown` followed by `wsl`. 
-7. You will enter the new WSL distribution. Exit the WSL using `exit`. The WSL will continue running (`wsl -l -v`).
-8. The WSL is now installed with the required packages, and the template project files are copied into the WSL in the user's home folder.
+`powershell.exe -ExecutionPolicy Bypass -File .\wsl-parser.ps1`  
+After this The WSL is now installed with the required packages, and the template project files are copied into the WSL in the user's home folder.
+3. Check available WSL distributions and their states with: `wsl -l -v`
+   - Optional Set the new WSL as default with: `wsl --set-default <DistroName>`.
+4. Run the WSL distribution: `wsl -d <name>`
+   - Check Python extension are installed (requirements.txt): `cd /home/nico/`
+   - `source venv/bin/activate`
+   - `pip list` # Should display list with also: Flask, fastapi, Werkzeug, and others
+5. Start VS code by typing: ` code .` (see next paragrap)
 
 ---
 

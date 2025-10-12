@@ -14,7 +14,7 @@ DESCRIPTION This distribution will install a stack for: Your text.`Use backticks
 # --------------------------------------------------------------------------------------------------------------------------------
 # - DISTRO will be used to select or create the target distro
 # - USER will be used to create a new distro if it does not exist,i f distro is created it will assume the user exists
-DISTRO NewDistro2
+DISTRO Test
 USER nico
 
 # 1.2 OPTIONAL Indicate to Create new distro, using: DISTRO and USER. If the WSL exists this will fail.
@@ -45,20 +45,22 @@ RUN sudo systemctl enable redis-server
 #   RUN echo "whatever..."
 
 
-# 3. Create a Python virtual environment and install the requirements file
+# 3.Copy the folder and files including subfolders and files
 # --------------------------------------------------------------------------------------------------------------------------------
-COPY requirements.txt requirements.txt
+#
+COPY ./app home/nico/app	# Make sure this is set correct! (change 'nico' with the user you use)
+
+# 4. Create a Python virtual environment and install the requirements file
+# --------------------------------------------------------------------------------------------------------------------------------
+WORKDIR /home/nico/app								# Make sure this is set correct! (change 'nico' with the user you use)
+COPY requirements.txt home/nico/requirements.txt	# Make sure this is set correct! (change 'nico' with the user you use)
 RUN python3 -m venv ~/venv
-RUN ~/venv/bin/pip install -r requirements.txt
+RUN ~/venv/bin/pip install -r /home/nico/requirements.txt/requirements.txt
 # after this choos:
 # - Use: `/home/nico/venv/bin/python` as interpreter in VS Code
 # - Or add this: source `~/venv/bin/activate` to the .bashrc file.
 
 
-# 4.Copy the folder and files including subfolders and files
-# --------------------------------------------------------------------------------------------------------------------------------
-#
-COPY ./app home/nico/app
 
 
 # 4. Run this script command

@@ -105,6 +105,8 @@ function Task_CMDRun {
     Invoke-Expression $Command
 }
 
+
+
 function Task_Copy {
     param(
         [string]$Source,   
@@ -278,7 +280,9 @@ Get-Content $WSLfile | ForEach-Object {
         $command = $Matches[1] -replace '\\(\$)', '$1'
         Task_Run $command
     }
-    elseif ($line -match "^COPY\s+(\S+)\s+(\S+)$") {
+    #elseif ($line -match "^COPY\s+(\S+)\s*(#.*)?$") {
+    elseif ($line -match "^COPY\s+(\S+)\s+(\S+)\s*(#.*)?$"){
+    #elseif ($line -match "^COPY\s+(\S+)\s+(\S+)$") {
         Task_Copy $Matches[1] $Matches[2]
     }
     elseif ($line -match "^ENV\s+(\S+)=(.*)$") {
@@ -287,7 +291,8 @@ Get-Content $WSLfile | ForEach-Object {
     elseif ($line -match "^ENV_APPLY") {
         Task_EnvApply
     }
-    elseif ($line -match "^WORKDIR\s+(\S+)$") {
+    elseif ($line -match "^WORKDIR\s+(\S+)\s*(#.*)?$") {
+    #elseif ($line -match "^WORKDIR\s+(\S+)$") {
         Task_SetWorkDir $Matches[1]
     }
     elseif( $line -match "^DISTRO_DEBIAN_NEW\s+(.+)$"){
