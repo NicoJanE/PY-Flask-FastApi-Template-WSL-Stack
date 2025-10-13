@@ -105,8 +105,11 @@ function Task_CMDRun {
     Invoke-Expression $Command
 }
 
-
-
+# TODO
+# Has a problem a copy command as:
+#   COPY requirements.txt home/nico/requirements.txt
+# will result in the copy of the requirements.txt file into this target folder:
+#   home/nico/requirements.txt/requirements.txt  # the requirements.txt is a directory
 function Task_Copy {
     param(
         [string]$Source,   
@@ -117,6 +120,11 @@ function Task_Copy {
 
     # Normalize WSL target path
     $TargetWSL = $Target.Replace("\", "/").TrimEnd("/")
+
+    # Expand ~ to the user's home directory
+    if ($TargetWSL -like "~*") {
+        $TargetWSL = $TargetWSL -replace "^~", "home/$Global:User"
+    }
 
     # Include files and folders recursively
     $items = Get-ChildItem -Path $Source -Recurse
@@ -129,7 +137,12 @@ function Task_Copy {
     foreach ($item in $items) {
         # Relative path inside source folder
         $relPath = $item.FullName.Substring((Resolve-Path $Source).Path.Length).TrimStart('\')
-        $destWSL = "/$TargetWSL/$relPath" -replace '\\','/'
+        #$destWSL = "/$TargetWSL/$relPath" -replace '\\','/'
+        if ($items.Count -eq 1 -and -not ($TargetWSL -match '/$')) {
+            $destWSL = "/$TargetWSL" -replace '\\','/'
+        } else {
+            $destWSL = "/$TargetWSL/$relPath" -replace '\\','/'
+        }
 
         # Convert Windows path to WSL path
         $drive, $rest = $item.FullName -split ":", 2
@@ -279,10 +292,8 @@ Get-Content $WSLfile | ForEach-Object {
         # Fix PowerShell variable expansion by converting \$ back to $
         $command = $Matches[1] -replace '\\(\$)', '$1'
         Task_Run $command
-    }
-    #elseif ($line -match "^COPY\s+(\S+)\s*(#.*)?$") {
+    }    
     elseif ($line -match "^COPY\s+(\S+)\s+(\S+)\s*(#.*)?$"){
-    #elseif ($line -match "^COPY\s+(\S+)\s+(\S+)$") {
         Task_Copy $Matches[1] $Matches[2]
     }
     elseif ($line -match "^ENV\s+(\S+)=(.*)$") {
@@ -292,7 +303,6 @@ Get-Content $WSLfile | ForEach-Object {
         Task_EnvApply
     }
     elseif ($line -match "^WORKDIR\s+(\S+)\s*(#.*)?$") {
-    #elseif ($line -match "^WORKDIR\s+(\S+)$") {
         Task_SetWorkDir $Matches[1]
     }
     elseif( $line -match "^DISTRO_DEBIAN_NEW\s+(.+)$"){

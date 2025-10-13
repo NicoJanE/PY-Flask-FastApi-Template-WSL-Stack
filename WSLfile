@@ -24,16 +24,16 @@ DISTRO_DEBIAN_NEW  --web-download --location "_wsl-data\project"
 
 # 2. Indicate the command to install 
 # --------------------------------------------------------------------------------------------------------------------------------
-RUN sudo apt-get update -y
+RUN sudo apt-get update -y 
 #   - Must keep the Python packages even when using a virtual environment(venv)
 RUN sudo apt-get install -y python3 python3-pip python3-venv python3-dev build-essential
 #   - Common tools
-RUN sudo apt-get install -y procps grep net-tools curl wget
+RUN sudo apt-get install -y procps grep net-tools curl wget 
 
 # Install Redis server
-RUN sudo apt update && sudo apt install redis-server
+RUN sudo apt update && sudo apt install redis-server 
 # Make sure Redis is configured to start as a service
-RUN sudo systemctl enable redis-server
+RUN sudo systemctl enable redis-server # me TESTTT
 # Manual start: sudo systemctl start redis-server
 
 
@@ -44,23 +44,19 @@ RUN sudo systemctl enable redis-server
 # AVOID the echo command to prevent issues with caused by PowerShell interpreting special characters
 #   RUN echo "whatever..."
 
-
-# 3.Copy the folder and files including subfolders and files
+# 3.Copy the folder and files including sub-folders and files to user home
 # --------------------------------------------------------------------------------------------------------------------------------
 #
-COPY ./app home/nico/app	# Make sure this is set correct! (change 'nico' with the user you use)
+COPY ./app ~/app
 
-# 4. Create a Python virtual environment and install the requirements file
+# 4. Create a Python virtual environment and install the requirements file(User home)
 # --------------------------------------------------------------------------------------------------------------------------------
-WORKDIR /home/nico/app								# Make sure this is set correct! (change 'nico' with the user you use)
-COPY requirements.txt home/nico/requirements.txt	# Make sure this is set correct! (change 'nico' with the user you use)
+COPY requirements.txt ~/requirements.txt
 RUN python3 -m venv ~/venv
-RUN ~/venv/bin/pip install -r /home/nico/requirements.txt/requirements.txt
-# after this choos:
+RUN ~/venv/bin/pip install -r requirements.txt 
+# After this choose:
 # - Use: `/home/nico/venv/bin/python` as interpreter in VS Code
 # - Or add this: source `~/venv/bin/activate` to the .bashrc file.
-
-
 
 
 # 4. Run this script command
@@ -73,13 +69,11 @@ RUN ~/venv/bin/pip install -r /home/nico/requirements.txt/requirements.txt
 ## 5.) Set environment variables,
 ## --------------------------------------------------------------------------------------------------------------------------------
 #
-ENV MY_VAR1=HelloWorld today1
-ENV MY_VAR2=HelloWorld today2
 ENV MY_VAR3=HelloWorld today2
 ENV_APPLY
 
 
-# Test the environment variables - simple test (this fails echo has issue incombination with PowerShell)
+# Test the environment variables - simple test (the following fails echo has issue in combination with PowerShell)
 # RUN  echo "$MY_VAR1"
 
 
