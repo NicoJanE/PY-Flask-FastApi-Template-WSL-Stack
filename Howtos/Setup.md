@@ -117,3 +117,7 @@ To debug and run:
 - Open the Run and Debug tab in VS Code.
 - From the configuration dropdown, select **Debug Flask App**.
 - When VS Code starts the server, it will display a link to the running web app — click the link to open it in your browser.
+
+<br><br>
+<div align="center"> ─── ✦ ───
+</div>
