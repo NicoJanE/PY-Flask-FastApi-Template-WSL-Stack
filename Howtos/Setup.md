@@ -1,7 +1,8 @@
 ---
 layout: default_c
 RefPages:
- - index
+ - name: Introduction & requirements 
+   link: index.md
 
 --- 
 
