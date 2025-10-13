@@ -67,7 +67,7 @@ This is the easiest way to do it:
 3. Navigate to your project folder, e.g.: `cd ~/app`
 4. Type: `code .`  
 This launches a VS Code instance on the Windows host, connects it to your WSL environment, and automatically installs the VS Code Server inside WSL.
-From there, you can install the required extensions and open your project folder.
+From there, you can **instal**l the required **extensions** (see 3.4) and **open** your **project folder**.
 
 ><details>  
 >  <summary class="clickable-summary">
