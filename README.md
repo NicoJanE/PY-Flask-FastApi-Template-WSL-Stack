@@ -3,7 +3,7 @@
 
 This is a Python project application template using Flask and FastAPI in a **WSL container**
 
->> [Direct Link to the Setup page](https://nicojane.github.io/PY-Flask-FastApi-Template-WSL-Stack/Howtos/Setup)
+> [Direct Link to the Setup page](https://nicojane.github.io/PY-Flask-FastApi-Template-WSL-Stack/Howtos/Setup)
 
 ## Requirements
 

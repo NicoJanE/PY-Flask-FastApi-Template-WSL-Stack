@@ -1,32 +1,21 @@
-# What
+---
+layout: default_c
+RefPages:
+ - index
 
-This is a Python project application template using Flask and FastAPI in a **WSL container**
+--- 
 
+# Setup Page
+
+This is the setup page of the ***Python Flask/FAst-Api template project***
 <br>
 
-## 1. Requirements
 
-- Windows 10 or 11
-- WSL 2.6.1.0
-- Powershell 5.1 or 7.3
 
-This is a Python Flask application (template) that requires the following libraries (installed with pip via the requirements file):
+## 1. About WSLFile
 
-1. Flask: A web framework for Python.
-2. Redis: An in-memory data structure store, used as a database.
-3. Jinja2: A modern and designer-friendly templating language for Python.
-4. PDB: Python Debugger, used for debugging the Flask application.
-
-The template includes a basic structure for a web application using FastAPI and Flask, with support for Redis as a database and Jinja2 for templating. PDB is provided for debugging purposes during development.
-
-<small> Note: There is also a Docker version of this project template available. However, due to remote debugging issues in the Docker container, it is recommended to use this non-Docker version. The Docker container can be found [here](https://github.com/NicoJanE/PY-Flask-FastApi-Template-Stack) <small>
-
----
-
-## 2. About WSLFile
-
-This WSL is generated with the `WSLFile` script utility which can be found [here](https://github.com/NicoJanE/Powershell-Utilities/blob/master/WSLFile/).
-This file functions similarly to a Dockerfile and can:
+This WSL is generated with the `WSLFile` script utility which is included but also can be found [here](https://github.com/NicoJanE/Powershell-Utilities/blob/master/WSLFile/).
+This file script functions similarly to a `Dockerfile` and can:
 
 - Download and install the **Debian Trixie** OS into  your new  WSL distribution
 - Create/Setup your WSL environment, for example Create specific Debian user.
@@ -36,7 +25,7 @@ This file functions similarly to a Dockerfile and can:
 
 ---
 
-## 3. Setup
+## 2. Setup Instructions
 
 This will install and configure the WSl distribution
 
@@ -60,16 +49,16 @@ After this The WSL is now installed with the required packages, and the template
 
 ---
 
-## 4. Visual Studio Code in the WSL
+## 3. Visual Studio Code in the WSL
 
-### 4.1  First-Time Setup
+### 3.1  First-Time Setup
 
 Make sure the VS Code is installed on your **host** with the **WSL** extension
 
 - [Download from](https://code.visualstudio.com) and install it on the host
 - Add the Remote WSL extension (Name: `WSL`, Id: `ms-vscode-remote.remote-wsl`).
 
-### 4.2. Start VS Code from WSL (Recommended Method)
+### 3.2. Start VS Code from WSL (Recommended Method)
 
 This is the easiest way to do it:
 
@@ -90,7 +79,7 @@ From there, you can install the required extensions and open your project folder
 >
 </details>
 
-### 4.3. Start VS Code Connected to WSL (Alternative Method)
+### 3.3. Start VS Code Connected to WSL (Alternative Method)
 
 To start the VS Code WSL from the Windows host VS Code
 
@@ -105,7 +94,7 @@ To start the VS Code WSL from the Windows host VS Code
 
 ---
 
-### 4.4. Required WSL VS Code extensions
+### 3.4. Required WSL VS Code extensions
 
 Ensure the following extensions are installed inside your WSL environment (VS Code will prompt you if any are missing):
 
@@ -118,7 +107,7 @@ Ensure the following extensions are installed inside your WSL environment (VS Co
 
 ---
 
-### 4.5 Debug and Run
+### 3.5 Debug and Run
 
 Debugging and running the application take place **inside the WSL environment**. The project uses the built-in **Python Debugger** (pdb) for debugging, and the necessary setup code is already included in the sample.
 
