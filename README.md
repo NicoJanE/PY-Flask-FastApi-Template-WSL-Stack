@@ -24,7 +24,8 @@ After installation your project is in the Debian WSL distribution, use VS Code t
 <small>✅ Last succeeded test: 13 October 2025 </small>
 
 <br>
-<small> Note: There is also a Docker version of this project template available. However, due to remote debugging issues in the Docker container, it is recommended to use this non-Docker version. The Docker container can be found: [here](https://github.com/NicoJanE/PY-Flask-FastApi-Template-Stack) </small>
+<small> Note: There is also a Docker version of this project template available. However, due to remote debugging issues in the Docker container, it is recommended to use this non-Docker version. The Docker container can be found: [here](https://github.com/NicoJanE/PY-Flask-FastApi-Template-Stack) 
+</small>
 
 
 
