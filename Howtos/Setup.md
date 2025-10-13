@@ -75,9 +75,9 @@ From there, you can install the required extensions and open your project folder
 >  <span  class="summary-icon"></span> <!-- Square Symbol -->
 >  <b>Help: `code .` command does not work the first time!</b>
 >  </summary> <!-- On same line is failure -->
->  
-> This can happen if VS Code on the host has never been connected to a WSL environment before. In that case, start VS Code once using the **Alternative Method** below (via *WSL: Connect to WSL*). This will initialize the integration and make the code command available inside WSL.
 >
+> This can happen if VS Code on the host has never been connected to a WSL environment before. In that case, start VS Code once using the **Alternative Method** below (via *WSL: Connect to WSL*). This will initialize the integration and make the code command available inside WSL.
+
 </details>
 
 ### 3.3. Start VS Code Connected to WSL (Alternative Method)
