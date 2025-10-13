@@ -1,10 +1,10 @@
 ---
 layout: default_c
 RefPages:
- - name: Introduction & requirements 
-   link: index.md
+ -  "[Introduction & requirements](index.md)
 
 --- 
+
 
 # Setup Page
 
