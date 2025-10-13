@@ -1,7 +1,8 @@
 ---
 layout: default_c
 RefPages:
- - 
+ - ./Howtos/Setup.md
+
 
 --- 
 
