@@ -1,13 +1,15 @@
 {
-    "python.defaultInterpreterPath": "/home/nico/app/.venv/bin/python",
-    "python.pythonPath": "/home/nico/app/.venv/bin/python",
+    "python.defaultInterpreterPath": "${env:HOME}/venv/bin/python",    
     "python.analysis.extraPaths": [
         "${workspaceFolder}/src"
     ],
     "python.analysis.autoSearchPaths": true,
     "python.analysis.autoImportCompletions": true,
-    "python.linting.enabled": true,
-    "python.linting.pylintEnabled": false,
+    "python.analysis.typeCheckingMode": "basic", // for Pylance type checking
+
+    //"python.linting.enabled": true,
+    //"python.linting.flake8Enabled": true, // use flake8 instead of pylint
+    //"python.linting.pylintEnabled": false,
     "pylance.insidersChannel": "off",
 
 

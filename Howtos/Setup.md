@@ -33,7 +33,6 @@ This will install and configure the WSl distribution
 1. Open and edit the `WSFile` to customize the settings, recommend settings to customize include:
     - `DISTRO` Indicates the WSL distribution to use, if it's a new distribution make sure to uncomment: `DISTRO_DEBIAN_NEW` 
     - `USER` Indicates the user under which the Debian packages are installed and to which user directory the  files are copied 
-      - when changing this also change the lines marked with the comment;: `# Make sure this is set correct!`
     - `DISTRO_DEBIAN_NEW` When Enabled will generate a new WSL under the name defined in `DISTRO`
    - `DESCRIPTION` Set a description for the WSL 
 
