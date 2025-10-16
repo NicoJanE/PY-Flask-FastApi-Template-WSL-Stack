@@ -118,7 +118,10 @@ To debug and run:
 - From the configuration dropdown, select **Debug Flask App**.
 - When VS Code starts the server, it will display a link to the running web app — click the link to open it in your browser.
 
-> **Python Interpreter Selection:** On first run, VS Code may prompt you to select a Python interpreter. Choose the one in the virtual environment: `~/venv/bin/python`. 
+> **Python Interpreter Selection:** On first run, VS Code may prompt you to select a Python interpreter. 
+> The best way is to select the `enter the interpreter path` and enter: **~/venv/bin/python**  
+> <br>
+>**Warning:** When you select one you might end up with the wrong environment and the Python packages will not be found!
 > 
 > *Note: Unfortunately, VS Code sometimes ignores the `python.defaultInterpreterPath` setting in `settings.json`, requiring manual selection.*
 
