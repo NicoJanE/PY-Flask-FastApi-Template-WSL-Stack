@@ -6,14 +6,13 @@ RefPages:
 
 <br>
 
-# Setup Page
+# Python Flask/Fast Template <span style="color: #409EFF; font-size: 0.6em; font-style: italic;"> -  Docker Setup & Usage Guide</span>
 
+## ℹ️ Introduction
 This is the setup page of the ***Python Flask/FAst-Api template project***
 <br>
 
-
-
-## 1. About WSLFile
+## 🎯 About WSLFile
 
 This WSL is generated with the `WSLFile` script utility which is included but also can be found [here](https://github.com/NicoJanE/Powershell-Utilities/blob/master/WSLFile/).
 This file script functions similarly to a `Dockerfile` and can:
@@ -26,7 +25,7 @@ This file script functions similarly to a `Dockerfile` and can:
 
 ---
 
-## 2. Setup Instructions
+## 🛠️ Setup Instructions
 
 This will install and configure the WSl distribution
 
@@ -49,7 +48,7 @@ After this The WSL is now installed with the required packages, and the template
 
 ---
 
-## 3. Visual Studio Code in the WSL
+## 💜 Visual Studio Code in the WSL
 
 ### 3.1  First-Time Setup
 
@@ -105,7 +104,6 @@ Ensure the following extensions are installed inside your WSL environment (VS Co
 - REST Client: `humao.rest-client`
 - Database Client: `cweijan.vscode-database-client2`
 
-
 ---
 
 ### 3.5 Debug and Run
@@ -125,6 +123,9 @@ To debug and run:
 > 
 > *Note: Unfortunately, VS Code sometimes ignores the `python.defaultInterpreterPath` setting in `settings.json`, requiring manual selection.*
 
-<br><br>
-<div align="center"> ─── ✦ ───
-</div>
+<br>
+<sub> This file is part of:  **Python Flask/Fast API Template Stack**
+Copyright (c) 2025 Nico Jan Eelhart. This source code is licensed under the MIT License found in the  'LICENSE.md' file in the root directory of this source tree.
+</sub>
+
+<p align="center">─── ✦ ───</p>

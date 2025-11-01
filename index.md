@@ -3,18 +3,17 @@ layout: default_c
 RefPages:
  - Setup
 
-
 --- 
 
-<br>
+# Python Flask/Fast Template <span style="color: #409EFF; font-size: 0.6em; font-style: italic;"> -  Docker Container</span> <br>
 
-# What
+## ℹ️ Introduction
 
 This is a Python project application template using Flask and FastAPI in a **WSL container**
 
 > [Direct Link to the Setup page](https://nicojane.github.io/PY-Flask-FastApi-Template-WSL-Stack/Howtos/Setup)
 
-## Requirements
+## ✅ Requirements
 
 - Windows 10 or 11
 - WSL 2.6.1.0
@@ -35,6 +34,9 @@ After installation your project is in the Debian WSL distribution, use VS Code t
 <br>
 <small> Note: There is also a Docker version of this project template available. However, due to remote debugging issues in the Docker container, it is recommended to use this non-Docker version. The Docker container can be found: [here](https://github.com/NicoJanE/PY-Flask-FastApi-Template-Stack) </small>
 
-<br><br>
-<div align="center"> ─── ✦ ───
-</div>
+<br>
+<sub> This file is part of:  **Python Flask/Fast API Template Stack**
+Copyright (c) 2025 Nico Jan Eelhart. This source code is licensed under the MIT License found in the  'LICENSE.md' file in the root directory of this source tree.
+</sub>
+
+<p align="center">─── ✦ ───</p>
