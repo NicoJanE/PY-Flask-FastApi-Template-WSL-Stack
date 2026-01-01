@@ -1,6 +1,8 @@
 
 # Python Flask/Fast Template <span style="color: #409EFF; font-size: 0.6em; font-style: italic;"> -  Docker Container</span>
 
+![MIT License](https://img.shields.io/badge/License-MIT-green) ![Commercial Services Available](https://img.shields.io/badge/Services-Optional-blue)
+
 ## ℹ️ Introduction
 
 This is a Python project application template using Flask and FastAPI in a **WSL container**
@@ -36,8 +38,10 @@ Note: There is also a Docker version of this project template available. However
   </a>
 </p>
 
-<sub> This file is part of: **Python Flask/Fast API Template Stack**
-Copyright (c) 2025 Nico Jan Eelhart. This source code is licensed under the MIT License found in the  'LICENSE.md' file in the root directory of this source tree.
-</sub>
+<br>
+<small> <i><b>License</b><br>This file is part of: <b>Python Flask/Fast API Template Stack</b>  Copyright (c) 2025-2026 Nico Jan Eelhart.This repository is <a href="MIT-license.md">MIT licensed</a>and free to use. For optional commercial support, customization, training, or long-term maintenance, see <a href="COMMERCIAL.md">COMMERCIAL.md</a></i>
+</small>
+<br> <br>
+
 
 <p align="center">─── ✦ ───</p>
