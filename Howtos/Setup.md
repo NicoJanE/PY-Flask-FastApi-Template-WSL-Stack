@@ -8,7 +8,10 @@ RefPages:
 
 # Python Flask/Fast Template <span style="color: #409EFF; font-size: 0.6em; font-style: italic;"> -  Docker Setup & Usage Guide</span>
 
+![MIT License](https://img.shields.io/badge/License-MIT-green) ![Commercial Services Available](https://img.shields.io/badge/Services-Optional-blue)
+
 ## ℹ️ Introduction
+
 This is the setup page of the ***Python Flask/FAst-Api template project***
 <br>
 
@@ -128,4 +131,9 @@ To debug and run:
 Copyright (c) 2025 Nico Jan Eelhart. This source code is licensed under the MIT License found in the  'LICENSE.md' file in the root directory of this source tree.
 </sub>
 
+<span style="color: #6d757dff; font-size: 13px; font-style: italic;"> <br>
+<i><b>License</b><br>This file is part of: **Python Flask/Fast API Template Stack**  Copyright (c) 2025-2026 Nico Jan Eelhart. This repository is [MIT licensed](../MIT-license.md) and free to use. For optional commercial support, customization, training, or long-term maintenance, see [COMMERCIAL.md](../COMMERCIAL.md).</i>
+</span>
+
+<br>
 <p align="center">─── ✦ ───</p>
